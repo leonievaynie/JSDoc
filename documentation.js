@@ -15,7 +15,7 @@ export {
 import { id } from "week3/church/church"
 
 
-function fun1()    { return 1; } //fun1 is defined
+function fun1()    { return 1; }
 
 /**
  * Arrow Function
@@ -64,6 +64,10 @@ class Person {
 const Student = name => {
     let age = 0;
     return {
+        /**
+         *
+         * @return {number}
+         */
         getAge: () => age,
             setAge: newAge => age = newAge,
             getName: () => name,
