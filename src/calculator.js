@@ -1,8 +1,8 @@
 /**
+ * Calculator
  * @module calculator
- * */
-
-export const calculator = 'calculator';
+ */
+export {add, multiply}
 
 /**
  * Add two numbers
@@ -10,7 +10,7 @@ export const calculator = 'calculator';
  * @param {number} y - second number
  * @return {number} - Sum of x and y
  */
-export const add = (x, y) => x + y;
+const add = (x, y) => x + y;
 
 /**
  will be module:calculator~multiply

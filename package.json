@@ -1,0 +1,24 @@
+{
+  "name": "jsdoc",
+  "version": "1.0.0",
+  "description": "Brief introduction to JSDoc",
+  "main": "src",
+  "dependencies": {
+    "jsdoc": "^3.6.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leonievaynie/JSDoc.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leonievaynie/JSDoc/issues"
+  },
+  "homepage": "https://github.com/leonievaynie/JSDoc#readme",
+  "type": "module"
+}

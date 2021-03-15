@@ -26,33 +26,45 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>//import {plus} from "./calculator.js"
-
-import * as add from './calculator'
+            <pre class="prettyprint source linenums"><code>import {add} from "./calculator.js"
 
 /**
  * Represents the name of a student.
- * Type checking for string.
  * @type {string}
  */
-const studentName = 12222;
+const studentName = 'Rahel';
 
 /**
  * Type checking for array of numbers.
- * Problem: sobald ein Wert in Array korrekt ist -> wird nicht mehr falsch angezeigt
- * @type {Array&lt;string>}
+ * @type {Array&lt;number>}
  */
-const arrayOfNumbers = [ 2, false, 4, 5];
+const arrayOfNumbers = [1, 2, 3, 4];
+
+/**
+ * Checks if a given number is an even number.
+ * @param {number} number - Given number.
+ * @return {boolean} - Whether or not a number is an even number.
+ */
+const isEvenNumber = number => number % 2 === 0;
+console.log(isEvenNumber(true));
+
+/**
+ * Print out name on the console.
+ * @param {string} studentName - Name of a student.
+ * @return {void}
+ */
+const printName = studentName => console.log(studentName);
+printName("Rahel");
 
 /**
  * Creates an object representing a Student.
+ * @constructor
  * @param {string} name - The student's full name.
  * @param {number} age - The student's age.
  * @param {boolean} isDeveloper - Whether or not the student is a developer.
  * @return {Object} The student object.
  */
-function createStudent(name, age, isDeveloper) {
-    //Todo show code completion for properties of name
+const Student = (name, age, isDeveloper) => {
     return {
         name:name,
         age: age,
@@ -60,26 +72,33 @@ function createStudent(name, age, isDeveloper) {
     }
 };
 
-function createPerson(name, age, isDeveloper) {
+// mit JSDoc
+const student = Student();
+const newStudent = Student('Mike', 30, true);
 
+const createPerson = (name, age, isDeveloper) => {
     return {
         name:name,
         age: age,
         isDeveloper:isDeveloper
     }
-}
+};
 
-// Todo Vorteil: Zeigt auch gleich den type der Parameter der Funktion an in der Vorschau
+// ohne JSDoc
+const newPerson = createPerson();
 
-class Student {
+/*
+* Documentation and properties of a class
+*/
+
+class Person {
     /**
-     * Creates a Student
-     * @param {string} name The student's full name.
-     * @param {number} age The student's age.
-     * @param {boolean} isDeveloper Whether or not the student is a developer.
-     * @constructor
+     * Create a Person
+     * @param {string} name - The student's full name.
+     * @param {number} age - The student's age.
+     * @param {boolean} isStudent - Whether or not person is a student.
      */
-    constructor(name, age, isDeveloper) {
+    constructor(name, age, isStudent) {
         /**
          * @property {string} name - Persons name
          */
@@ -89,9 +108,9 @@ class Student {
          */
         this.age = age;
         /**
-         * @property {boolean} isDeveloper
+         * @property {boolean} isStudent
          */
-        this.isDeveloper = isDeveloper;
+        this.isStudent = isStudent;
     }
 
     /**
@@ -103,42 +122,46 @@ class Student {
     };
 }
 
-// todo all Properties of students are showed in code completion
-
 // link to a Class f.e
 /**
- * Student one
- * See {@link Student}
+ * Person one
+ * See {@link Person}
  */
-const student1 = new Student('Rahel', 24, true);
+const person1 = new Person('Rahel', 24, true);
+
+// todo all Properties of students are showed in code completion
 
 /**
- *
- * @param {Student} student
+ * Print information about a student.
+ * @param {Person} person
+ * @return {void}
  */
-function printStudent(student){
-    console.log(`${student.name} is ${student.age} years old and is ${student.isDeveloper ? 'developer' : 'not developer'} `)
+const printPerson = (person) => {
+    console.log(`${person.name} is ${person.age} years old and is ${person.isStudent ? 'developer' : 'not developer'} `)
 }
 
+/*
+* Create a type definition
+*/
+
 /**
- * A Person
- * @typedef {Object} Person
- * @property {number} id - Person ID
- * @property {string} name - Person name
- * @property {string|number} [age] - Person age
- * @property {boolean} isHealthy - Person is healthy
+ * An animal
+ * @typedef {Object} Animal
+ * @property {number} id - Animal ID
+ * @property {string} name - Animal name
+ * @property {string|number} [age] - Animal age
+ * @property {boolean} isHealthy - Animal is healthy
  */
 
 /**
- * @type {Person}
+ * @type {Animal}
  */
-const person1 = {
+const animal = {
     id: 1,
-    name: 'Rahel Koch',
-    age: 24,
-    isHealthy: true
-};
-</code></pre>
+    name: 'Gina',
+    age: 10,
+    isHealthy: "true"
+};</code></pre>
         </article>
     </section>
 
@@ -148,13 +171,13 @@ const person1 = {
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-calculator.html">calculator</a></li></ul><h3>Classes</h3><ul><li><a href="Student.html">Student</a></li></ul><h3>Global</h3><ul><li><a href="global.html#arrayOfNumbers">arrayOfNumbers</a></li><li><a href="global.html#createStudent">createStudent</a></li><li><a href="global.html#person1">person1</a></li><li><a href="global.html#printStudent">printStudent</a></li><li><a href="global.html#student1">student1</a></li><li><a href="global.html#studentName">studentName</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-calculator.html">calculator</a></li></ul><h3>Classes</h3><ul><li><a href="Person.html">Person</a></li><li><a href="Student.html">Student</a></li></ul><h3>Global</h3><ul><li><a href="global.html#animal">animal</a></li><li><a href="global.html#arrayOfNumbers">arrayOfNumbers</a></li><li><a href="global.html#isEvenNumber">isEvenNumber</a></li><li><a href="global.html#person1">person1</a></li><li><a href="global.html#printName">printName</a></li><li><a href="global.html#printPerson">printPerson</a></li><li><a href="global.html#studentName">studentName</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.6</a> on Sun Mar 14 2021 21:04:46 GMT+0100 (Central European Standard Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.6</a> on Mon Mar 15 2021 11:52:00 GMT+0100 (Central European Standard Time)
 </footer>
 
 <script> prettyPrint(); </script>
