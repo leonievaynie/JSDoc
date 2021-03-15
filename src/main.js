@@ -71,8 +71,8 @@ const newPerson = createPerson();
 class Person {
     /**
      * Create a Person
-     * @param {string} name - The student's full name.
-     * @param {number} age - The student's age.
+     * @param {string} name - The persons's full name.
+     * @param {number} age - The person's age.
      * @param {boolean} isStudent - Whether or not person is a student.
      */
     constructor(name, age, isStudent) {
