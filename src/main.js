@@ -1,4 +1,4 @@
-import {add} from "./calculator.js"
+import {add, multiply} from "./calculator.js"
 
 /**
  * Represents the name of a student.
@@ -14,19 +14,23 @@ const arrayOfNumbers = [1, 2, 3, 4];
 
 /**
  * Checks if a given number is an even number.
- * @param {number} number - Given number.
+ * @param {number} number - A given number.
  * @return {boolean} - Whether or not a number is an even number.
  */
 const isEvenNumber = number => number % 2 === 0;
-console.log(isEvenNumber(true));
+console.log(isEvenNumber(6));
 
 /**
  * Print out name on the console.
- * @param {string} studentName - Name of a student.
+ * @param {string} studentName - Student name.
  * @return {void}
  */
 const printName = studentName => console.log(studentName);
 printName("Rahel");
+
+/*
+* Constructor
+ */
 
 /**
  * Creates an object representing a Student.
@@ -58,6 +62,7 @@ const createPerson = (name, age, isDeveloper) => {
 
 // ohne JSDoc
 const newPerson = createPerson();
+
 
 /*
 * Documentation and properties of a class
@@ -101,16 +106,16 @@ class Person {
  */
 const person1 = new Person('Rahel', 24, true);
 
-// todo all Properties of students are showed in code completion
-
 /**
  * Print information about a student.
  * @param {Person} person
  * @return {void}
  */
 const printPerson = (person) => {
-    console.log(`${person.name} is ${person.age} years old and is ${person.isStudent ? 'developer' : 'not developer'} `)
-}
+    console.log(`${person.name} is ${person.age} years old and is ${person.isStudent ? 'student' : 'not student'} `)
+};
+
+printPerson(person1);
 
 /*
 * Create a type definition
@@ -132,5 +137,5 @@ const animal = {
     id: 1,
     name: 'Gina',
     age: 10,
-    isHealthy: "true"
+    isHealthy: true
 };

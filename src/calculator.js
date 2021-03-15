@@ -13,6 +13,9 @@ export {add, multiply}
 const add = (x, y) => x + y;
 
 /**
- will be module:calculator~multiply
+ * Multiply two numbers
+ * @param {number} x - fist number
+ * @param {number} y - second number
+ * @return {number} - Product of x and y
  */
-const multiply = x => y => x * y;
+const multiply = (x, y) => x * y;
